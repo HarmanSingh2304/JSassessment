@@ -1,0 +1,54 @@
+// create a variable to hold your NFT's
+const NFTarray = []
+// this function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+
+function mintNFT (Name,Age,Gender,Address) {
+
+const NFT = {
+
+"Name":Name,
+
+"Age":Age,
+
+"Gender":Gender,
+
+"Address":Address
+}
+NFTarray.push(NFT)
+
+console.log("Minted: "+Name)
+
+console.log("-")
+
+}
+// create a "loop" that will go through an "array" of NFT's
+ function listNFTs () {
+
+for(let list = 0; list<NFTarray.length;list++) 
+    {
+console.log("NFT ID Number: "+ (list+1)); 
+ NFT=NFTarray[list];
+console.log("Name: "+NFT.Name);
+console.log("Age "+NFT.Age);
+console.log("Gender:"+NFT.Gender); 
+console.log("Address: "+NFT.Address); 
+console.log("")
+
+}
+
+}
+// print the total number of NFTs 
+function getTotalSupply() 
+{
+     console.log("total number of NFTs="+NFTarray.length); 
+     console.log("------")
+
+}
+ mintNFT("Harman", "26", "Male", "Chandigarh");
+ mintNFT("Sonam", "24", "Female", "Mohali");
+ mintNFT("Zorawar", "23", "Male", "Delhi"); 
+ 
+ listNFTs();
+getTotalSupply();
